@@ -10,6 +10,8 @@ class AuthorsController < ApplicationController
     @author = Author.create!(author_params)
     
     if @author.vlaid? 
+      
+      author.save
 
     redirect_to author_path(@author)
     
